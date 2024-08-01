@@ -73,30 +73,30 @@
           <p>  
             To illustrate, this is a basic process of how the Diffie-Hellman based Private Set Intersection works:  <br /> <br />
             
-            1. Initial Setup:  <br />
-            a. Two parties, known as Alice and Bob, agree on a DH group description, including a generator g and an order q.  <br />
-            b. They also have hash functions (e.g., H) to ensure the original set data stay hidden. <br /> <br />
+            <b>1. Initial Setup:</b>  <br />
+            &ensp;a. Two parties, known as Alice and Bob, agree on a DH group description, including a generator g and an order q.  <br />
+            &ensp;b. They also have hash functions (e.g., H) to ensure the original set data stay hidden. <br /> <br />
             
-            2. Protocol Execution:  <br />
-            The protocol consists of four rounds: <br /> <br />
+            &ensp;2. Protocol Execution:  <br />
+            &ensp;The protocol consists of four rounds: <br /> <br />
 
-            a. Alice: <br />
-              I. Picks a secret random exponent a from the range [0,𝑞) <br />
-             II. Hashes all items in her input set 𝑋   <br />
-            III. Raises the hashed set to the power of 𝑎 and sends the results to Bob. (𝑋 ) <br /> <br />
+            <b>a. Alice:</b> <br />
+            &ensp;  I. Picks a secret random exponent a from the range [0,𝑞) <br />
+            &ensp; II. Hashes all items in her input set 𝑋   <br />
+            &ensp;III. Raises the hashed set to the power of 𝑎 and sends the results to Bob. (𝑋 ) <br /> <br />
 
-            b. Bob: <br />
-              I. Picks a secret random exponent b from the same range.  <br />
-             II. Follows the same procedure as Alice, with his input set 𝑌  <br />
-            III. Raise the hashed set to the power of 𝑏 and send the results to Alice. (𝑌 ) <br /> <br />
+            <b>b. Bob:</b> <br />
+            &ensp;  I. Picks a secret random exponent b from the same range.  <br />
+            &ensp; II. Follows the same procedure as Alice, with his input set 𝑌  <br />
+            &ensp;III. Raise the hashed set to the power of 𝑏 and send the results to Alice. (𝑌 ) <br /> <br />
 
-            c. Alice: <br />
-             I. Receives Bob’s message and raises it to the power of 𝑎. (𝑌 ) <br />
-            II. Send the result back to Bob. <br /> <br />
+            <b>c. Alice:</b> <br />
+            &ensp; I. Receives Bob’s message and raises it to the power of 𝑎. (𝑌 ) <br />
+            &ensp;II. Send the result back to Bob. <br /> <br />
             
-            d. Bob: <br />
-             I. Receives Alice’s message and raises it to the power of 𝑏. (𝑋 ) <br />
-            II. Send the result back to Alice. <br /> <br />
+            <b>d. Bob:</b> <br />
+            &ensp; I. Receives Alice’s message and raises it to the power of 𝑏. (𝑋 ) <br />
+            &ensp;II. Send the result back to Alice. <br /> <br />
             
             The intersected elements are now revealed, as both parties can compare the common elements in 𝑋 and 𝑌 . <br />
             As Alice knows the original elements in 𝑋, and Bob knows the original elements in 𝑌, both parties will know the original intersected elements, while remaining oblivious to the identity of the other elements. 
@@ -107,14 +107,14 @@
 
         <div class="row">
           <h2>Benefits Of Private Set Intersection</h2>
-          <p>PSI allows privacy of the information to be preserved, while allowing for a meaningful exchange of information between two parties. No additional information aside from the intersected elements is disclosed, <br />
-            ensuring both parties’ data remain confidential. This can be useful in multiple ways, and this is explored in the two examples below: <br />
+          <p>PSI allows privacy of the information to be preserved, while allowing for a meaningful exchange of information between two parties. No additional information aside from the intersected elements is disclosed, 
+            ensuring both parties’ data remain confidential. This can be useful in multiple ways, and this is explored in the two examples below: <br /><br />
             
-            <b>1. Voting</b> - PSI allows the user to check if a voter is accidentally registered in 2 different states by checking if any registered voters intersect in the list of voters between the two states. <br />
+            <b>1. Voting</b> - PSI allows the user to check if a voter is accidentally registered in 2 different states by checking if any registered voters intersect in the list of voters between the two states.
             Doing this through the use of PSI maintains the privacy and identity of the other voters to the other state. <br /><br />
             
-            <b>Healthcare</b> - PSI allows for the user to compare his/her genes against the hospital’s database to compute the risk of a particular disease without revealing her genes. On the other hand, <br />
-            the hospital also does not wish to reveal its discoveries to the user as the hospital has spent time and money researching the genes. As this data is private to both the user and the hospital, <br />
+            <b>Healthcare</b> - PSI allows for the user to compare his/her genes against the hospital’s database to compute the risk of a particular disease without revealing her genes. On the other hand,
+            the hospital also does not wish to reveal its discoveries to the user as the hospital has spent time and money researching the genes. As this data is private to both the user and the hospital,
             PSI allows for the user to only discover the risk of the disease without revealing additional information. </p>
         </div>
 
