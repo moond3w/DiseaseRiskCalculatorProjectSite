@@ -20,7 +20,7 @@
   </head>
 
   <body>
-
+    <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -55,28 +55,48 @@
       <div class="jumbotron" >
         <div class="container">
           <h1 class="display-3">Team Members</h1>
-          <p>A project with the aim to develop a functional system that applies Diffie-Hellman's Private Set Intersection to assess the risk that a patient could have a disease without revealing the genes of the patient to the hospital, nor revealing the hospital's discoveries to either party.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+          <p>Team members making this project possible.</p>
         </div>
       </div>
 
       <div class="container">
-        <!-- Columns to describe Project -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Project Purpose</h2>
-            <p>The purpose of this project is to develop a privacy-preserving healthcare application that utilises the Private-Set Intersection(PSI) protocol. Specifically, the project seeks to create a system which allows an individual to determine the risk of contracting a particular disease, without the need to reveal their sensitive genetic information to healthcare providers. By implementing this PSI protocol, the system essentially ensures the privacy of both the individual client and the healthcare provider whilst allowing for the disease risk assessment to be carried out based on the intersection of the individual's genetic data and the hospital's set of disease-causing genes. </p>
-          </div>
-          <div class="col-md-4">
-            <h2>Project Description</h2>
-            <p>The project will aim to utilize Diffie-Hellman Private Set Intersection protocol as part of a healthcare application to ensure privacy for both patients and hospital. The application will utilize both the Django Framework in Python and React Framework in Javascript as part of development. The project will also be implementing TLS to provide a secure communication channel for the users while they using the application.</p>
-          </div>
-          <div class="col-md-4">
-            <h2>What is PSI?</h2>
-            <p>Private Set Intersection (PSI) is a secure two-party computation (2PC) problem that allows for two parties to compute the intersection between both sets of data, while the elements that are not in the intersection remain private to the other party.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Learn More &raquo;</a></p>
-          </div>
-        </div>
+        <!-- Table to list members -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>UOW ID</th>
+              <th>SIM ID</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1111111</td>
+              <td>11111111</td>
+              <td>Marc Ryan Britto</td>
+            </tr>
+            <tr>
+              <td>7910939</td>
+              <td>11111111</td>
+              <td>Chai Guo Liang</td>
+            </tr>
+            <tr>
+              <td>1111111</td>
+              <td>11111111</td>
+              <td>Aung Kaung Myat</td>
+            </tr>
+            <tr>
+              <td>1111111</td>
+              <td>11111111</td>
+              <td>Syed Isyraq</td>
+            </tr>
+            <tr>
+              <td>1111111</td>
+              <td>11111111</td>
+              <td>Bryan Ee Rui Yang</td>
+            </tr>
+          </tbody>
+        </table>
 
         <hr>
 
