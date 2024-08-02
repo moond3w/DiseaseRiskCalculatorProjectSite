@@ -61,85 +61,93 @@
       <div class="container">
         <!-- Columns to describe Project -->
         <div class="row">
+          <div class="col-12">
             <h2>Introduction to Private Set Intersection</h2>
             <p>Private Set Intersection (PSI) is a secure two-party computation (2PC) problem that allows for two parties to compute the intersection between both sets of data, while the elements that are not in the intersection remain private to the other party. There are many different approaches to this problem, however, for this project, we will be focusing on the Diffie-Hellman based PSI approach. </p>
+          </div>
         </div>
 
         <hr>
 
         <div class="row">
-          <h2>How does it actually work?</h2>
-          <p>  
-            To illustrate, this is a basic process of how the Diffie-Hellman based Private Set Intersection works:  <br /> <br />
-            
-            <b>1. Initial Setup:</b>  <br />
-            &ensp;a. Two parties, known as Alice and Bob, agree on a DH group description, including a generator g and an order q.  <br />
-            &ensp;b. They also have hash functions (e.g., H) to ensure the original set data stay hidden. <br /> <br />
-            
-            <b>2. Protocol Execution:</b>  <br />
-            &ensp;The protocol consists of four rounds: <br /> <br />
+          <div class="col-12">
+            <h2>How does it actually work?</h2>
+            <p>  
+              To illustrate, this is a basic process of how the Diffie-Hellman based Private Set Intersection works:  <br /> <br />
+              
+              <b>1. Initial Setup:</b>  <br />
+              &ensp;a. Two parties, known as Alice and Bob, agree on a DH group description, including a generator g and an order q.  <br />
+              &ensp;b. They also have hash functions (e.g., H) to ensure the original set data stay hidden. <br /> <br />
+              
+              <b>2. Protocol Execution:</b>  <br />
+              &ensp;The protocol consists of four rounds: <br /> <br />
 
-            &ensp;<b>a. Alice:</b> <br />
-            &ensp;&ensp;  I. Picks a secret random exponent a from the range [0,𝑞) <br />
-            &ensp;&ensp; II. Hashes all items in her input set 𝑋   <br />
-            &ensp;&ensp;III. Raises the hashed set to the power of 𝑎 and sends the results to Bob. (𝑋 ) <br /> <br />
+              &ensp;<b>a. Alice:</b> <br />
+              &ensp;&ensp;  I. Picks a secret random exponent a from the range [0,𝑞) <br />
+              &ensp;&ensp; II. Hashes all items in her input set 𝑋   <br />
+              &ensp;&ensp;III. Raises the hashed set to the power of 𝑎 and sends the results to Bob. (𝑋 ) <br /> <br />
 
-            &ensp;<b>b. Bob:</b> <br />
-            &ensp;&ensp;  I. Picks a secret random exponent b from the same range.  <br />
-            &ensp;&ensp; II. Follows the same procedure as Alice, with his input set 𝑌  <br />
-            &ensp;&ensp;III. Raise the hashed set to the power of 𝑏 and send the results to Alice. (𝑌 ) <br /> <br />
+              &ensp;<b>b. Bob:</b> <br />
+              &ensp;&ensp;  I. Picks a secret random exponent b from the same range.  <br />
+              &ensp;&ensp; II. Follows the same procedure as Alice, with his input set 𝑌  <br />
+              &ensp;&ensp;III. Raise the hashed set to the power of 𝑏 and send the results to Alice. (𝑌 ) <br /> <br />
 
-            &ensp;<b>c. Alice:</b> <br />
-            &ensp;&ensp; I. Receives Bob’s message and raises it to the power of 𝑎. (𝑌 ) <br />
-            &ensp;&ensp;II. Send the result back to Bob. <br /> <br />
-            
-            &ensp;<b>d. Bob:</b> <br />
-            &ensp;&ensp; I. Receives Alice’s message and raises it to the power of 𝑏. (𝑋 ) <br />
-            &ensp;&ensp;II. Send the result back to Alice. <br /> <br />
-            
-            The intersected elements are now revealed, as both parties can compare the common elements in 𝑋 and 𝑌 . <br />
-            As Alice knows the original elements in 𝑋, and Bob knows the original elements in 𝑌, both parties will know the original intersected elements, while remaining oblivious to the identity of the other elements. 
-        </p>
+              &ensp;<b>c. Alice:</b> <br />
+              &ensp;&ensp; I. Receives Bob’s message and raises it to the power of 𝑎. (𝑌 ) <br />
+              &ensp;&ensp;II. Send the result back to Bob. <br /> <br />
+              
+              &ensp;<b>d. Bob:</b> <br />
+              &ensp;&ensp; I. Receives Alice’s message and raises it to the power of 𝑏. (𝑋 ) <br />
+              &ensp;&ensp;II. Send the result back to Alice. <br /> <br />
+              
+              The intersected elements are now revealed, as both parties can compare the common elements in 𝑋 and 𝑌 . <br />
+              As Alice knows the original elements in 𝑋, and Bob knows the original elements in 𝑌, both parties will know the original intersected elements, while remaining oblivious to the identity of the other elements. 
+            </p>
+          </div>
         </div>
 
         <hr>
 
         <div class="row">
-          <h2>Benefits Of Private Set Intersection</h2>
-          <p>PSI allows privacy of the information to be preserved, while allowing for a meaningful exchange of information between two parties. No additional information aside from the intersected elements is disclosed, 
-            ensuring both parties’ data remain confidential. This can be useful in multiple ways, and this is explored in the two examples below: <br /><br />
-            
-            <b>1. Voting</b> - PSI allows the user to check if a voter is accidentally registered in 2 different states by checking if any registered voters intersect in the list of voters between the two states.
-            Doing this through the use of PSI maintains the privacy and identity of the other voters to the other state. <br /><br />
-            
-            <b>Healthcare</b> - PSI allows for the user to compare his/her genes against the hospital’s database to compute the risk of a particular disease without revealing her genes. On the other hand, 
-            the hospital also does not wish to reveal its discoveries to the user as the hospital has spent time and money researching the genes. As this data is private to both the user and the hospital, 
-            PSI allows for the user to only discover the risk of the disease without revealing additional information. </p>
+          <div class="col-12">
+            <h2>Benefits Of Private Set Intersection</h2>
+            <p>PSI allows privacy of the information to be preserved, while allowing for a meaningful exchange of information between two parties. No additional information aside from the intersected elements is disclosed, 
+              ensuring both parties’ data remain confidential. This can be useful in multiple ways, and this is explored in the two examples below: <br /><br />
+              
+              <b>1. Voting</b> - PSI allows the user to check if a voter is accidentally registered in 2 different states by checking if any registered voters intersect in the list of voters between the two states.
+              Doing this through the use of PSI maintains the privacy and identity of the other voters to the other state. <br /><br />
+              
+              <b>Healthcare</b> - PSI allows for the user to compare his/her genes against the hospital’s database to compute the risk of a particular disease without revealing her genes. On the other hand, 
+              the hospital also does not wish to reveal its discoveries to the user as the hospital has spent time and money researching the genes. As this data is private to both the user and the hospital, 
+              PSI allows for the user to only discover the risk of the disease without revealing additional information. </p>
+          </div>
         </div>
 
         <hr>
 
         <div class="row">
-          <h2>Challenges Of Implementing Private Set Intersection</h2>
-          <p>
-            <b>1. Asymmetric Gene Set Size</b> <br /><br />
-                The specialised hospital is expected to have a significantly larger set of gene
-                set data as compared to the patient. This would lead to an asymmetric gene set
-                size between the two parties, which may significantly increase the computation
-                time. Certain protocols need to be implemented to ensure the computation
-                process remains efficient. To address this issue, we may look to implement cuckoo hashing can be used to
-                ensure a constant time lookup of the data, ensuring that the application remains
-                efficient. <br /><br />
+          <div class="col-12">
+            <h2>Challenges Of Implementing Private Set Intersection</h2>
+            <p>
+              <b>1. Asymmetric Gene Set Size</b> <br />
+                  The specialised hospital is expected to have a significantly larger set of gene
+                  set data as compared to the patient. This would lead to an asymmetric gene set
+                  size between the two parties, which may significantly increase the computation
+                  time. Certain protocols need to be implemented to ensure the computation
+                  process remains efficient. To address this issue, we may look to implement cuckoo hashing can be used to
+                  ensure a constant time lookup of the data, ensuring that the application remains
+                  efficient. <br /><br />
 
-            <b>2. Ensuring Privacy of Gene Sets</b> <br /><br />
-                A collection of individual gene data is known and stored in a database. If
-                hashing alone is used in the process of PSI, malicious attackers may use
-                dictionary attacks to compromise the privacy of the patient or the hospital. To
-                address this issue, homomorphic encryption can be used to ensure the privacy
-                of both parties. Homomorphic encryption allows for computation of the data
-                while it remains encrypted, allowing both parties to determine the intersected
-                sets without revealing additional information. <br /><br />
-        </p>
+              <b>2. Ensuring Privacy of Gene Sets</b> <br />
+                  A collection of individual gene data is known and stored in a database. If
+                  hashing alone is used in the process of PSI, malicious attackers may use
+                  dictionary attacks to compromise the privacy of the patient or the hospital. To
+                  address this issue, homomorphic encryption can be used to ensure the privacy
+                  of both parties. Homomorphic encryption allows for computation of the data
+                  while it remains encrypted, allowing both parties to determine the intersected
+                  sets without revealing additional information. <br /><br />
+            </p>
+          </div>
         </div>
 
         <hr>
